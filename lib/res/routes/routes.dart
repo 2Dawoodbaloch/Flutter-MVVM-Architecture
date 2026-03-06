@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm_architecture/utils/routes/routes_name.dart';
+import 'package:flutter_mvvm_architecture/res/routes/routes_name.dart';
 import 'package:flutter_mvvm_architecture/view/home_screen.dart';
-import 'package:flutter_mvvm_architecture/view/login_screen.dart';
+import 'package:flutter_mvvm_architecture/view/auth/login_screen.dart';
 
 class Routes {
 

@@ -5,6 +5,11 @@ import 'package:another_flushbar/flushbar.dart';
 
 class Utils {
 
+  static void focusFieldChange(BuildContext context,FocusNode current,FocusNode nextFocus) {
+    current.unfocus();
+    FocusScope.of(context).requestFocus(nextFocus);
+  }
+
  static toastMessage(String message){
    Fluttertoast.showToast(
        msg: message,
@@ -17,11 +22,12 @@ class Utils {
  static void flushBarErrorMessage(String message,BuildContext context){
    showFlushbar(context: context,
        flushbar: Flushbar(
+         flushbarPosition: FlushbarPosition.TOP,
          forwardAnimationCurve: Curves.decelerate,
          margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
          padding: EdgeInsets.all(15),
          message: message,
-         duration: Duration(seconds: 3),
+         duration: Duration(seconds: 6),
          borderRadius: BorderRadius.circular(20),
          backgroundColor: Colors.red,
          reverseAnimationCurve: Curves.easeInOut,
